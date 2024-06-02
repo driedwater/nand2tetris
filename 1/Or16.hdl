@@ -1,0 +1,94 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/1/Or16.hdl
+/**
+ * 16-bit Or gate:
+ * for i = 0, ..., 15:
+ * out[i] = a[i] Or b[i] 
+ */
+CHIP Or16 {
+    IN a[16], b[16];
+    OUT out[16];
+
+    PARTS:
+    Not(in=a[0], out=notA0);
+    Not(in=b[0], out=notB0);
+    And(a=notA0, b=notB0, out=notAandnotB0);
+    Not(in=notAandnotB0, out=out[0]);
+
+    Not(in=a[1], out=notA1);
+    Not(in=b[1], out=notB1);
+    And(a=notA1, b=notB1, out=notAandnotB1);
+    Not(in=notAandnotB1, out=out[1]);
+
+    Not(in=a[2], out=notA2);
+    Not(in=b[2], out=notB2);
+    And(a=notA2, b=notB2, out=notAandnotB2);
+    Not(in=notAandnotB2, out=out[2]);
+
+    Not(in=a[3], out=notA3);
+    Not(in=b[3], out=notB3);
+    And(a=notA3, b=notB3, out=notAandnotB3);
+    Not(in=notAandnotB3, out=out[3]);
+
+    Not(in=a[4], out=notA4);
+    Not(in=b[4], out=notB4);
+    And(a=notA4, b=notB4, out=notAandnotB4);
+    Not(in=notAandnotB4, out=out[4]);
+
+    Not(in=a[5], out=notA5);
+    Not(in=b[5], out=notB5);
+    And(a=notA5, b=notB5, out=notAandnotB5);
+    Not(in=notAandnotB5, out=out[5]);
+
+    Not(in=a[6], out=notA6);
+    Not(in=b[6], out=notB6);
+    And(a=notA6, b=notB6, out=notAandnotB6);
+    Not(in=notAandnotB6, out=out[6]);
+
+    Not(in=a[7], out=notA7);
+    Not(in=b[7], out=notB7);
+    And(a=notA7, b=notB7, out=notAandnotB7);
+    Not(in=notAandnotB7, out=out[7]);
+
+    Not(in=a[8], out=notA8);
+    Not(in=b[8], out=notB8);
+    And(a=notA8, b=notB8, out=notAandnotB8);
+    Not(in=notAandnotB8, out=out[8]);
+
+    Not(in=a[9], out=notA9);
+    Not(in=b[9], out=notB9);
+    And(a=notA9, b=notB9, out=notAandnotB9);
+    Not(in=notAandnotB9, out=out[9]);
+    
+    Not(in=a[10], out=notA10);
+    Not(in=b[10], out=notB10);
+    And(a=notA10, b=notB10, out=notAandnotB10);
+    Not(in=notAandnotB10, out=out[10]);
+
+    Not(in=a[11], out=notA11);
+    Not(in=b[11], out=notB11);
+    And(a=notA11, b=notB11, out=notAandnotB11);
+    Not(in=notAandnotB11, out=out[11]);
+
+    Not(in=a[12], out=notA12);
+    Not(in=b[12], out=notB12);
+    And(a=notA12, b=notB12, out=notAandnotB12);
+    Not(in=notAandnotB12, out=out[12]);
+
+    Not(in=a[13], out=notA13);
+    Not(in=b[13], out=notB13);
+    And(a=notA13, b=notB13, out=notAandnotB13);
+    Not(in=notAandnotB13, out=out[13]);
+
+    Not(in=a[14], out=notA14);
+    Not(in=b[14], out=notB14);
+    And(a=notA14, b=notB14, out=notAandnotB14);
+    Not(in=notAandnotB14, out=out[14]);
+
+    Not(in=a[15], out=notA15);
+    Not(in=b[15], out=notB15);
+    And(a=notA15, b=notB15, out=notAandnotB15);
+    Not(in=notAandnotB15, out=out[15]);
+}
